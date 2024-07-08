@@ -2,7 +2,7 @@ const express = require('express');
 const Product = require('../models/Product');
 const router = express.Router();
 
-// Here I define the route to create a new cart.
+// Here I define the route to create a new product.
 router.post('/', async (req, res) => {
   try {
     const product = new Product(req.body);
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Here I define the route to get all carts.
+// Here I define the route to get all product.
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find();

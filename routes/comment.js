@@ -2,7 +2,7 @@ const express = require('express');
 const Comment = require('../models/Comment');
 const router = express.Router();
 
-// Here I define the route to create a new cart.
+// Here I define the route to create a new comment.
 router.post('/', async (req, res) => {
   try {
     const comment = new Comment(req.body);
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Here I define the route to get all carts.
+// Here I define the route to get all comment.
 router.get('/', async (req, res) => {
   try {
     const comments = await Comment.find();

@@ -2,7 +2,7 @@ const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
 
-// Here I define the route to create a new cart.
+// Here I define the route to create a new user.
 router.post('/', async (req, res) => {
   try {
     const user = new User(req.body);
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Here I define the route to get all carts.
+// Here I define the route to get all user.
 router.get('/', async (req, res) => {
   try {
     const users = await User.find();
